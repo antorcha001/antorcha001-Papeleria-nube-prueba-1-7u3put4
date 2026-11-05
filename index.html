@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Borrador visual de Nube Papel, una tienda de artículos de papelería.">
+  <title>Nube Papel | Papelería creativa</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="inicio">
+  <div class="announcement-bar">Ideas, color y creatividad para todos tus días</div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Nube Papel, inicio">
+        <img src="assets/logo.svg" alt="" width="42" height="42">
+        <span>Nube <strong>Papel</strong><small>PAPELERÍA CREATIVA</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a class="active" href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="servicios.html">Servicios</a>
+      </nav>
+      <div class="header-actions">
+        <form class="header-search" action="productos.html" method="get" role="search">
+          <input type="search" name="q" placeholder="Buscar productos..." aria-label="Buscar productos">
+          <button type="submit" aria-label="Buscar"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg></button>
+        </form>
+        <button class="account-button" type="button" data-account>Mi cuenta</button>
+        <a class="cart-link" href="carrito.html" aria-label="Ir al carrito">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 10.1a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 1.9-1.4L21 8H6"></path><circle cx="9.5" cy="20" r="1.2"></circle><circle cx="18" cy="20" r="1.2"></circle></svg>
+          <span class="cart-count" data-cart-count>0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero page-width">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> TU ESPACIO CREATIVO</span>
+        <h1>Pequeñas cosas,<br><span>grandes ideas.</span></h1>
+        <p>Encuentra esos materiales que hacen que estudiar, crear y organizar tus días sea mucho más especial.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="productos.html">Explorar productos <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="servicios.html">Conoce nuestros servicios</a>
+        </div>
+        <div class="hero-note"><span class="note-star">✦</span><span>Un poquito de inspiración en cada página.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Ilustración de artículos de papelería" role="img">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="floating-note note-top"><span>✦</span> crea a tu manera</div>
+        <img class="hero-product hero-notebook" src="assets/productos/cuaderno.svg" alt="Cuaderno ilustrado">
+        <img class="hero-product hero-pencil" src="assets/productos/colores.svg" alt="Lápices de colores ilustrados">
+        <div class="floating-note note-bottom">ideas bonitas <span>♡</span></div>
+      </div>
+    </section>
+
+    <section class="section page-width category-section">
+      <div class="section-heading">
+        <div><span class="eyebrow">ENCUENTRA LO QUE BUSCAS</span><h2>Explora por categoría</h2></div>
+        <a class="text-link" href="productos.html">Ver catálogo completo <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="category-grid" id="home-categories">
+        <a class="category-card category-purple" href="productos.html?categoria=Cuadernos"><span class="category-symbol">▤</span><strong>Cuadernos</strong><small>Para cada idea</small><span class="category-arrow">↗</span></a>
+        <a class="category-card category-blue" href="productos.html?categoria=Escritura"><span class="category-symbol">✎</span><strong>Escritura</strong><small>Plumas y lápices</small><span class="category-arrow">↗</span></a>
+        <a class="category-card category-pink" href="productos.html?categoria=Dibujo"><span class="category-symbol">✦</span><strong>Dibujo</strong><small>Color sin límites</small><span class="category-arrow">↗</span></a>
+        <a class="category-card category-green" href="productos.html?categoria=Accesorios"><span class="category-symbol">⌁</span><strong>Accesorios</strong><small>Pequeños esenciales</small><span class="category-arrow">↗</span></a>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="page-width">
+        <div class="section-heading">
+          <div><span class="eyebrow">UNA SELECCIÓN PARA TI</span><h2>Productos destacados</h2><p class="section-subtitle">Nuestros favoritos para acompañar tus proyectos.</p></div>
+          <a class="text-link" href="productos.html">Ver todos <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="product-grid" id="featured-products"></div>
+      </div>
+    </section>
+
+    <section class="section page-width popular-section">
+      <div class="popular-banner">
+        <div><span class="eyebrow">LOS MÁS BUSCADOS</span><h2>Los pequeños favoritos<br>de la comunidad.</h2><p>Artículos prácticos que siempre viene bien tener a la mano.</p><a class="button button-outline" href="productos.html?etiqueta=popular">Descubrir favoritos <span aria-hidden="true">↗</span></a></div>
+        <div class="popular-decoration"><span class="deco-ring"></span><span class="deco-spark spark-a">✦</span><span class="deco-spark spark-b">✧</span><span class="deco-word">make<br>something</span></div>
+      </div>
+      <div class="section-heading compact-heading"><div><span class="eyebrow">PARA TU ESCRITORIO</span><h2>También te puede gustar</h2></div></div>
+      <div class="product-grid" id="popular-products"></div>
+    </section>
+
+    <section class="service-teaser">
+      <div class="page-width service-teaser-inner"><div><span class="eyebrow">MÁS QUE PAPELERÍA</span><h2>También hacemos<br><span>tus ideas realidad.</span></h2><p>Conoce los servicios que puedes encontrar en nuestra papelería.</p><a href="servicios.html" class="button button-primary">Ver servicios <span aria-hidden="true">↗</span></a></div><img src="assets/servicios/impresion.svg" alt="Ilustración de servicio de impresión"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-main">
+      <div class="footer-brand"><a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="42" height="42"><span>Nube <strong>Papel</strong><small>PAPELERÍA CREATIVA</small></span></a><p>Un espacio para encontrar inspiración, organización y color.</p></div>
+      <div><h3>Explora</h3><a href="index.html">Inicio</a><a href="productos.html">Productos</a><a href="servicios.html">Servicios</a></div>
+      <div><h3>Contacto</h3><a href="mailto:contacto@nubepapel.demo">contacto@nubepapel.demo</a><span>Puebla, México</span><span>Datos de demostración</span></div>
+      <div><h3>Síguenos</h3><a href="#redes" data-demo-link>Instagram</a><a href="#redes" data-demo-link>Facebook</a><a href="#redes" data-demo-link>TikTok</a></div>
+    </div>
+    <div class="footer-bottom page-width"><span>© 2026 Nube Papel · Prototipo visual</span><span>Hecho para dar vida a tus ideas ✦</span></div>
+  </footer>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <dialog class="product-dialog" id="product-dialog"><button class="dialog-close" type="button" aria-label="Cerrar">×</button><div class="dialog-content"></div></dialog>
+</body>
+</html>

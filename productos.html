@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de productos de Nube Papel.">
+  <title>Productos | Nube Papel</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script><script src="js/app.js" defer></script>
+</head>
+<body data-page="productos">
+  <div class="announcement-bar">Ideas, color y creatividad para todos tus días</div>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="42" height="42"><span>Nube <strong>Papel</strong><small>PAPELERÍA CREATIVA</small></span></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Navegación principal"><a href="index.html">Inicio</a><a class="active" href="productos.html">Productos</a><a href="servicios.html">Servicios</a></nav>
+    <div class="header-actions"><form class="header-search" action="productos.html" method="get" role="search"><input type="search" name="q" placeholder="Buscar productos..." aria-label="Buscar productos"><button type="submit" aria-label="Buscar"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg></button></form><button class="account-button" type="button" data-account>Mi cuenta</button><a class="cart-link" href="carrito.html" aria-label="Ir al carrito"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.1 10.1a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 1.9-1.4L21 8H6"></path><circle cx="9.5" cy="20" r="1.2"></circle><circle cx="18" cy="20" r="1.2"></circle></svg><span class="cart-count" data-cart-count>0</span></a></div>
+  </div></header>
+  <main>
+    <section class="page-hero page-width"><div><span class="eyebrow">TODO PARA TUS IDEAS</span><h1>Nuestros <span>productos.</span></h1><p>Explora los materiales que te acompañan en cada proyecto.</p></div><div class="page-hero-mark">✳</div></section>
+    <section class="catalog-section page-width">
+      <div class="catalog-topline"><div><span class="eyebrow">CATÁLOGO</span><h2>Encuentra tu próximo favorito</h2></div><div class="catalog-count" id="product-count">Cargando productos...</div></div>
+      <div class="catalog-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><input type="search" id="catalog-search" placeholder="¿Qué estás buscando?" aria-label="Buscar en el catálogo"><button type="button" id="clear-search">Limpiar</button></div>
+      <div class="filter-block"><span class="filter-label">Categorías</span><div class="filter-chips" id="category-filters"></div></div>
+      <div class="filter-block tag-filter-block"><span class="filter-label">Etiquetas</span><div class="filter-chips" id="tag-filters"></div></div>
+      <div class="catalog-divider"></div>
+      <div class="product-grid" id="catalog-products"></div>
+      <div class="empty-state" id="catalog-empty" hidden><span>⌕</span><h3>No encontramos productos</h3><p>Prueba con otra palabra o cambia los filtros.</p><button class="button button-outline" id="reset-filters" type="button">Ver todo el catálogo</button></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="page-width footer-main"><div class="footer-brand"><a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="42" height="42"><span>Nube <strong>Papel</strong><small>PAPELERÍA CREATIVA</small></span></a><p>Un espacio para encontrar inspiración, organización y color.</p></div><div><h3>Explora</h3><a href="index.html">Inicio</a><a href="productos.html">Productos</a><a href="servicios.html">Servicios</a></div><div><h3>Contacto</h3><a href="mailto:contacto@nubepapel.demo">contacto@nubepapel.demo</a><span>Puebla, México</span><span>Datos de demostración</span></div><div><h3>Síguenos</h3><a href="#redes" data-demo-link>Instagram</a><a href="#redes" data-demo-link>Facebook</a><a href="#redes" data-demo-link>TikTok</a></div></div><div class="footer-bottom page-width"><span>© 2026 Nube Papel · Prototipo visual</span><span>Hecho para dar vida a tus ideas ✦</span></div></footer>
+  <div class="toast" role="status" aria-live="polite"></div><dialog class="product-dialog" id="product-dialog"><button class="dialog-close" type="button" aria-label="Cerrar">×</button><div class="dialog-content"></div></dialog>
+</body></html>
